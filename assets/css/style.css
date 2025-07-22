@@ -1,0 +1,23 @@
+
+    :root {
+      --maroon:#800000; --gold:#FFD700; --accent:#F5DEB3; --bg:#fff6f4; --text:#222;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Playfair Display', serif;background:var(--bg);color:var(--text);}
+    nav{position:sticky;top:0;background:var(--maroon);display:flex;justify-content:center;gap:2rem;padding:1rem;z-index:10;}
+    nav a{color:var(--gold);text-decoration:none;font-size:1.1rem;text-transform:uppercase;transition:color .3s;}
+    nav a.active, nav a:hover{color:#fff;border-bottom:2px solid var(--gold);}
+    section{display:none;padding:4rem 1rem;max-width:1100px;margin:0 auto;animation:fadeIn .8s;}
+    section.active{display:block;}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .hero, .about, .products, .contact{overflow:hidden;}
+    .hero-image, .about-image, .product-image{width:100%;height:auto;border-radius:12px;}
+    h1,h2{color:var(--maroon);margin-bottom:1rem;text-align:center;}
+    p{max-width:800px;margin:1rem auto;line-height:1.6;font-size:1.05rem;}
+    .team, .product-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2rem;}
+    .card{background:#fff;padding:1rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:transform .3s;}
+    .card:hover{transform:translateY(-5px);}
+    .card img{width:100%;border-radius:8px;}
+    .contact-list{list-style:none;width:90%;max-width:700px;margin:2rem auto;display:grid;gap:1rem;}
+    .contact-item{background:#fff;padding:1.5rem;border-left:6px solid var(--maroon);border-radius:8px;}
+  
